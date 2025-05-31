@@ -79,7 +79,7 @@ Hoverboard::Hoverboard() {
     // The flags (defined in /usr/include/termios.h - see http://pubs.opengroup.org/onlinepubs/007908799/xsh/termios.h.html):
     struct termios options;
     tcgetattr(port_fd, &options);
-    options.c_cflag = B115200 | CS8 | CLOCAL | CREAD;		//<Set baud rate
+    options.c_cflag = B9600 | CS8 | CLOCAL | CREAD;		//<Set baud rate
     options.c_iflag = IGNPAR;
     options.c_oflag = 0;
     options.c_lflag = 0;
